@@ -6,40 +6,65 @@ package com.ficertyn.ivysaur448;
 public class Exercise
 {
     private int _weight;
-    private int _sets;
-    private int _reps;
-    private String _name;
+    private String _exerciseName;
 
-    public Exercise(int weight, int sets, int reps, String name)
+    /**
+     * Constructor fo the Exercise class
+     *
+     * @param exerciseName The name of the exercise that this instance is managing
+     * @param currentWeight The current weight being used for this exercise
+     * @throws IllegalArgumentException
+     */
+    public Exercise(String exerciseName, int currentWeight) throws IllegalArgumentException
     {
-        if (name == null || name.isEmpty())
+        if (exerciseName == null || exerciseName.isEmpty())
         {
-            throw new NullPointerException("name");
+            throw new IllegalArgumentException("exerciseName can not be empty");
         }
 
-        _weight = weight;
-        _sets = sets;
-        _reps = reps;
-        _name = name;
+        _exerciseName = exerciseName;
+        _weight = currentWeight >= 50 ? currentWeight : 50;
     }
 
-    public int get_weight()
-    {
+    /**
+     * Gets the current weight of this exercise
+     *
+     * @return The weight of this exercise
+     */
+    public int get_Weight() {
         return _weight;
     }
 
-    public int get_sets()
+    /**
+     * Gets the 90% weight of this exercise
+     *
+     * @return The 90% weight of this exercise
+     */
+    public int get_90PercentWeight()
     {
-        return _sets;
+        double ninetyPercent = (double)_weight * .9;
+
+        double remainder = ninetyPercent % 5;
+        if (remainder >= 2.5)
+        {
+            double change = 5 - remainder;
+            ninetyPercent += change;
+        }
+        else if (remainder < 2.5)
+        {
+            ninetyPercent -= remainder;
+        }
+
+        return (int)ninetyPercent;
     }
 
-    public int get_reps()
+    /**
+     * Gets the name of this exercise
+     *
+     * @return The name of this exercise
+     */
+    public String get_ExerciseName()
     {
-        return _reps;
-    }
-
-    public String get_name()
-    {
-        return _name;
+        return _exerciseName;
     }
 }
