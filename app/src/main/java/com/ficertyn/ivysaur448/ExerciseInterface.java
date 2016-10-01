@@ -16,28 +16,28 @@ interface ExerciseInterface
      *
      * @return ExerciseType
      */
-    ExerciseType get_ExerciseType();
+    ExerciseType getExerciseType();
 
     /**
      * Gets the name of this Exercise
      *
      * @return Name
      */
-    String get_ExerciseName();
+    String getExerciseName();
 
     /**
      * Gets the full weight to be used for this Exercise
      *
      * @return Full Weight
      */
-    int get_FullWeight();
+    int getFullWeight();
 
     /**
      * Gets the 90% weight to be used for this Exercise
      *
      * @return Full Weight
      */
-    int get_90PercentWeight();
+    int get90PercentWeight();
 
     /**
      * Increases the weight for this exercise

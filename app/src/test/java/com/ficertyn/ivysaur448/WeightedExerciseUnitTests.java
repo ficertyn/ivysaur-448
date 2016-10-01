@@ -23,9 +23,9 @@ public class WeightedExerciseUnitTests
 
         WeightedExercise exercise = new WeightedExercise(type, name, fullWeight, increaseAmount);
 
-        assertEquals(type, exercise.get_ExerciseType());
-        assertEquals(name, exercise.get_ExerciseName());
-        assertEquals(fullWeight, exercise.get_FullWeight());
+        assertEquals(type, exercise.getExerciseType());
+        assertEquals(name, exercise.getExerciseName());
+        assertEquals(fullWeight, exercise.getFullWeight());
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -49,7 +49,7 @@ public class WeightedExerciseUnitTests
 
         WeightedExercise exercise = new WeightedExercise(type, name, fullWeight, increaseAmount);
 
-        assertEquals(50, exercise.get_FullWeight());
+        assertEquals(50, exercise.getFullWeight());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class WeightedExerciseUnitTests
 
         exercise.increaseWeight();
 
-        assertEquals(fullWeight + increaseAmount, exercise.get_FullWeight());
+        assertEquals(fullWeight + increaseAmount, exercise.getFullWeight());
     }
 
     @Test
@@ -77,6 +77,6 @@ public class WeightedExerciseUnitTests
 
         WeightedExercise exercise = new WeightedExercise(type, name, fullWeight, increaseAmount);
 
-        assertEquals(45, exercise.get_90PercentWeight());
+        assertEquals(45, exercise.get90PercentWeight());
     }
 }

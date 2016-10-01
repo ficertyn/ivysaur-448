@@ -38,7 +38,7 @@ public class UnweightedExercise extends Exercise
     }
 
     @Override
-    public int get_90PercentWeight()
+    public int get90PercentWeight()
     {
         return _fullWeight;
     }

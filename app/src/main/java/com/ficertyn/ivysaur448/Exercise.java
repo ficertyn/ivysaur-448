@@ -16,19 +16,19 @@ public abstract class Exercise implements ExerciseInterface
     protected int _fullWeight;
 
     @Override
-    public ExerciseType get_ExerciseType()
+    public ExerciseType getExerciseType()
     {
         return _type;
     }
 
     @Override
-    public String get_ExerciseName()
+    public String getExerciseName()
     {
         return _name;
     }
 
     @Override
-    public int get_FullWeight()
+    public int getFullWeight()
     {
         return _fullWeight;
     }

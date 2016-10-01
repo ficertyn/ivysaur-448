@@ -46,7 +46,7 @@ public class WeightedExercise extends Exercise
     }
 
     @Override
-    public int get_90PercentWeight()
+    public int get90PercentWeight()
     {
         return Helpers.get_90PercentWeight(_fullWeight);
     }
